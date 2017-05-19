@@ -5,7 +5,7 @@ var TodoList = React.createClass({
 
     render: function () {
         return (
-            <div>
+            <div className="container__content">
             <Todo/>
             </div>
         );
