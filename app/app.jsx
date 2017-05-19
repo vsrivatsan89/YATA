@@ -10,8 +10,10 @@ $(document).foundation();
 require('style!css!sass!applicationStyles')
 
 ReactDOM.render(
+    <div>
     <TodoApp>
-  </TodoApp>,
+  </TodoApp>
+  </div>,
   document.getElementById('app')
 
 );

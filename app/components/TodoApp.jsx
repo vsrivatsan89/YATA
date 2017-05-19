@@ -8,11 +8,20 @@ var TodoApp = React.createClass(
 {
     render: function(){
         return (
+            
             <div>
-            <h1>Yet Another Todo App</h1>
-            <TodoSearch/>
-            <TodoList/>
-            <TodoAdd/>
+
+            <h1 className="page-title">YATA</h1>
+            <div className = "row">
+
+            <div className="columns small-centered medium-6 container   ">
+                        <TodoSearch/>
+                        <TodoList/>
+                        <TodoAdd/>
+            </div>
+   
+            </div>
+
             </div>
 
         );

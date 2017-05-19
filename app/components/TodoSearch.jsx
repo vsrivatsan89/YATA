@@ -4,9 +4,9 @@ var TodoSearch = React.createClass({
 
     render: function () {
         return (
-            <div>
+            <div className="container__header">
             <input type='text' placeholder="Search Todos"/>
-            <input type='checkbox'>Completed</input>
+            <input type='checkbox'> Todos Completed</input>
             </div>
         );
     }
