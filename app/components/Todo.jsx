@@ -3,9 +3,10 @@ var React = require('react');
 var Todo = React.createClass({
 
     render: function () {
+      
         return (
             <div>
-            <input type='checkbox'/> Sample Todo
+            <input type='checkbox'/> {this.props.todoText}
             </div>
         );
     }

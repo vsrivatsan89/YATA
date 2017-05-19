@@ -17,6 +17,10 @@ var TodoAdd = React.createClass({
         e.preventDefault();  
         var textinputbox = this.refs.todoinput;
         var todotext = textinputbox.value;
+
+        if(todotext.length == 0)
+        return;
+
         var handleNewTodo = this.props.onNewTodo;
         handleNewTodo(todotext);
         textinputbox.value = '';

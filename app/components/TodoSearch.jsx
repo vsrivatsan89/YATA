@@ -6,7 +6,7 @@ var TodoSearch = React.createClass({
         return (
             <div className="container__header">
             <input type='text' placeholder="Search Todos"/>
-            <input type='checkbox'> Todos Completed</input>
+            <input type='checkbox'/><label>Completed</label>
             </div>
         );
     }

@@ -7,6 +7,8 @@ var TodoList = require("components/TodoList");
 var TodoApp = React.createClass(
 {
     render: function(){
+
+      
         return (
             
             <div>
@@ -16,7 +18,7 @@ var TodoApp = React.createClass(
 
             <div className="columns small-centered medium-6 container">
                         <TodoSearch/>
-                        <TodoList/>
+                        <TodoList todos={this.state.todos}/>
                         <TodoAdd onNewTodo={this.handleNewTodo} />
             </div>
    
@@ -27,8 +29,18 @@ var TodoApp = React.createClass(
         );
     },
     handleNewTodo: function(todotext){
-        console.log(todotext);
-        alert('received new todo: ' + todotext );
+
+        
+      
+        var todos = [...this.state.todos,todotext];
+        
+        this.setState({todos:todos})
+    },
+    getInitialState:function(){
+        return {
+        todos: []
+
+    }
     }
 }
 
