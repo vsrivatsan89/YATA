@@ -5,11 +5,23 @@ var TodoAdd = React.createClass({
     render: function () {
         return (
             <div className="container__footer">
-            <input type='text' placeholder="Add Todo"/>
-            <input type='button' value="Add Todo" className="button expanded"/>
+            <form onSubmit={this.onSubmit}>
+            <input type='text' placeholder="Add Todo" ref="todoinput"/>
+            <input type='submit' value="Add Todo" className="button expanded" />
+            </form>
             </div>
         );
-    }
+    },
+    onSubmit: function(e){
+        
+        e.preventDefault();  
+        var textinputbox = this.refs.todoinput;
+        var todotext = textinputbox.value;
+        var handleNewTodo = this.props.onNewTodo;
+        handleNewTodo(todotext);
+        textinputbox.value = '';
+    },
+    
 
 
 });

@@ -17,7 +17,7 @@ var TodoApp = React.createClass(
             <div className="columns small-centered medium-6 container">
                         <TodoSearch/>
                         <TodoList/>
-                        <TodoAdd/>
+                        <TodoAdd onNewTodo={this.handleNewTodo} />
             </div>
    
             </div>
@@ -25,6 +25,10 @@ var TodoApp = React.createClass(
             </div>
 
         );
+    },
+    handleNewTodo: function(todotext){
+        console.log(todotext);
+        alert('received new todo: ' + todotext );
     }
 }
 
