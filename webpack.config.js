@@ -26,7 +26,11 @@ module.exports = {
             applicationStyles: 'app/styles/app.scss',
             components: path.resolve(__dirname, 'app/components/'),
             api: path.resolve(__dirname, 'app/api/'),
-            test: path.resolve(__dirname, 'app/tests/')
+            test: path.resolve(__dirname, 'app/tests/'),
+            actions: path.resolve(__dirname, 'actions/actions.jsx'),
+            reducers: path.resolve(__dirname,'reducers/reducers.jsx'),
+            configurestore: path.resolve(__dirname,'store/configureStore.jsx')
+
         },
         extensions: ['', '.js', '.jsx']
     },

@@ -20,6 +20,7 @@ var TodoApp = React.createClass(
                         <TodoSearch/>
                         <TodoList todos={this.state.todos}/>
                         <TodoAdd onNewTodo={this.handleNewTodo} />
+                       
             </div>
    
             </div>
