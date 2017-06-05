@@ -1,10 +1,12 @@
 var React = require('react');
 var Todo = require('components/Todo');
+var {connect} = require('react-redux');
 
 var TodoList = React.createClass({
 
     render: function () {
         var listOfTodos = this.props.todos;
+        var showcompleted = this.props.showcompleted;
 
        function displayTodos(){
            if(listOfTodos.length === 0){
@@ -18,7 +20,17 @@ var TodoList = React.createClass({
               
                 var Todos = listOfTodos.map(function(todo){
                        
-                      return <Todo todoText={todo}/>
+                       if(showcompleted){
+                           //show only the completed todos
+                           if(todo.completed)
+                           return <Todo todo={todo}/>
+                       }else{
+                            if(!todo.completed)
+                                return <Todo todo={todo}/>
+                       }
+                       
+
+                      
                  });
 
                 
@@ -44,4 +56,9 @@ var TodoList = React.createClass({
 });
 
 
-module.exports = TodoList;
+module.exports = connect((state)=>{
+    return {
+        todos : state.todos,
+        showcompleted: state.showcompleted
+    }
+})(TodoList);

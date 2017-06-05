@@ -18,8 +18,8 @@ var TodoApp = React.createClass(
 
             <div className="columns small-centered medium-6 container">
                         <TodoSearch/>
-                        <TodoList todos={this.state.todos}/>
-                        <TodoAdd onNewTodo={this.handleNewTodo} />
+                        <TodoList/>
+                        <TodoAdd />
                        
             </div>
    
@@ -28,20 +28,6 @@ var TodoApp = React.createClass(
             </div>
 
         );
-    },
-    handleNewTodo: function(todotext){
-
-        
-      
-        var todos = [...this.state.todos,todotext];
-        
-        this.setState({todos:todos})
-    },
-    getInitialState:function(){
-        return {
-        todos: []
-
-    }
     }
 }
 

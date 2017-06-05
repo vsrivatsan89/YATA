@@ -27,9 +27,9 @@ module.exports = {
             components: path.resolve(__dirname, 'app/components/'),
             api: path.resolve(__dirname, 'app/api/'),
             test: path.resolve(__dirname, 'app/tests/'),
-            actions: path.resolve(__dirname, 'actions/actions.jsx'),
-            reducers: path.resolve(__dirname,'reducers/reducers.jsx'),
-            configurestore: path.resolve(__dirname,'store/configureStore.jsx')
+            actions: path.resolve(__dirname, 'app/actions/actions.jsx'),
+            reducers: path.resolve(__dirname,'app/reducers/reducers.jsx'),
+            configurestore: path.resolve(__dirname,'app/store/configureStore.jsx')
 
         },
         extensions: ['', '.js', '.jsx']
